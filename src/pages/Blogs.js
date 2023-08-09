@@ -44,7 +44,7 @@ export default function Blogs() {
 
   return (
     <>
-      <div className="cards ">{cards}</div>
+      <div className="cards">{cards}</div>
       <Pagination
         itemsCount={blogs.length}
         itemPerPage={pagiState.itemsPerPage}

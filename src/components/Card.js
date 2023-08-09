@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 
 export default function Card(props) {
   const { slug, title, content } = props;
-  console.log(slug);
 
   return (
     <div className="card">

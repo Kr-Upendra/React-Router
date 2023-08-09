@@ -3,7 +3,7 @@ import { blogUrl } from "../../utils/urls";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-export default function AddBlog() {
+export default function AddBlog(props) {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -15,10 +15,12 @@ export default function AddBlog() {
         title,
         content,
       });
-      alert("new blog add😎");
-      navigate("/blogs");
+      props.showAlert("new blog add😎", "success");
+      setTimeout(() => {
+        navigate("/blogs");
+      }, 3000);
     } catch (err) {
-      alert("some error occure!");
+      props.showAlert("some error occure!", "error");
     }
   };
 

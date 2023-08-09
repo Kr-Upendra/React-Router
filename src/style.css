@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +8,16 @@
 body {
   background-color: rgb(4, 0, 24);
   color: white;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
 }
 
 .app {
@@ -15,6 +25,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .appContainer {
@@ -50,7 +61,6 @@ body {
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 2rem;
   padding: 1rem;
-  width: max-content;
   margin: 0 auto;
 }
 
@@ -231,6 +241,33 @@ form {
   border: none;
   outline: none;
   text-transform: uppercase;
+}
+
+.alert {
+  position: absolute;
+  top: 10%;
+  padding: 0.95rem 1.25rem;
+  border-radius: 0.3rem;
+  background-color: #00439b6c;
+  backdrop-filter: blur(5px);
+  right: -100%;
+  transition: right 0.45s ease-in-out;
+}
+
+.a-success {
+  background-color: rgba(0, 224, 0, 0.548);
+}
+
+.a-error {
+  background-color: rgba(224, 0, 0, 0.678);
+}
+
+.a-me {
+  color: #e4e4e4;
+}
+
+.alert[aria-hidden="true"] {
+  right: 0;
 }
 
 @media (max-width: 1200px) {
