@@ -46,7 +46,7 @@ export default function Blogs() {
     <>
       <div className="cards">{cards}</div>
       <Pagination
-        itemsCount={pagiState.count}
+        itemsCount={blogs.length}
         itemPerPage={pagiState.itemsPerPage}
         currentPage={pagiState.currentPage}
         onPageChange={handlePageChange}
