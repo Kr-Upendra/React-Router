@@ -1,7 +1,7 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
-export default function Navbar() {
+export default function AdminLayout() {
   const activeStyle = {
     fontWeight: "bold",
     textDecoration: "underline",
@@ -9,30 +9,29 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="appContainer">
-      <Link className="logo" to="/">
-        React Examples
-      </Link>
-      <div className="right">
+    <>
+      <nav className="adnav">
         <NavLink
-          style={({ isActive }) => (isActive ? activeStyle : null)}
-          to="/"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          style={({ isActive }) => (isActive ? activeStyle : null)}
-          to="/blogs"
-        >
-          Blogs
-        </NavLink>
-        <NavLink
-          style={({ isActive }) => (isActive ? activeStyle : null)}
           to="/admin"
+          end
+          style={({ isActive }) => (isActive ? activeStyle : null)}
         >
-          Admin
+          Dashboard
         </NavLink>
-      </div>
-    </nav>
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : null)}
+          to="/admin/addblog"
+        >
+          Add Blog
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => (isActive ? activeStyle : null)}
+          to="/admin/getStats"
+        >
+          Get Stats
+        </NavLink>
+      </nav>
+      <Outlet />
+    </>
   );
 }

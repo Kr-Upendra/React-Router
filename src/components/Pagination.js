@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export default function Pagination(props) {
   const { itemsCount, itemPerPage, currentPage, onPageChange } = props;
@@ -13,7 +13,7 @@ export default function Pagination(props) {
         return (
           <span
             key={page}
-            className={currentPage === page ? 'active pbtn' : 'pbtn'}
+            className={currentPage === page ? "activePage pbtn" : "pbtn"}
             onClick={() => onPageChange(page)}
           >
             {page}
