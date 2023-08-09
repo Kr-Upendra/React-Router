@@ -4,21 +4,31 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
   background-color: rgb(4, 0, 24);
   color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
+.app {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.appin {
+  max-width: 60%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
 .appContainer {
-  margin-bottom: 2rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid rgba(174, 255, 231, 0.384);
+  border-bottom: 1px solid #aeffe762;
   padding: 1rem 0.85rem;
+  margin-bottom: 1rem;
 }
 
 .appContainer a {
@@ -116,8 +126,6 @@ article p {
 
 .blog {
   padding: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .blog h1 {
@@ -130,4 +138,18 @@ article p {
   margin-bottom: 1rem;
   font-size: 0.8rem;
   padding: 0.25rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0.35rem 0;
+  text-align: center;
+  border-top: 1px solid #aeffe762;
+  width: 100%;
+}
+
+footer span {
+  color: rgb(187, 239, 255);
+  font-size: 0.9rem;
 }
