@@ -6,7 +6,6 @@ import { blogUrl as url } from "../utils/urls";
 export default function Blog() {
   const params = useParams();
   const [blog, setBlog] = useState([]);
-  console.log(params);
 
   useEffect(() => {
     const getBlog = async () => {
